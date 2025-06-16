@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🌐 Interactive Web App</h1>
+
+  <!-- HOME SECTION -->
+  <div id="home" class="section">
+    <div class="home-boxes">
+      <div class="home-card responsive" onclick="showSection('responsive')">📦 Responsive Boxes</div>
+      <div class="home-card quiz" onclick="startQuiz()">🧠 Interactive Quiz</div>
+      <div class="home-card joke" onclick="showSection('joke')">😂 Random Joke</div>
+    </div>
+  </div>
+
+  <!-- RESPONSIVE BOX SECTION -->
+  <div id="responsive" class="section hidden">
+    <h2>Responsive Boxes</h2>
+    <div class="container">
+      <div class="box" onclick="alert('Box 1 Clicked')">Box 1</div>
+      <div class="box" onclick="alert('Box 2 Clicked')">Box 2</div>
+      <div class="box" onclick="alert('Box 3 Clicked')">Box 3</div>
+    </div>
+    <button onclick="showSection('home')">Back to Home</button>
+  </div>
+
+  <!-- QUIZ SECTION -->
+  <div id="quiz" class="section hidden">
+    <h2>🧠 Interactive Quiz</h2>
+    <div id="quiz-container">
+      <div id="question"></div>
+      <div id="answers"></div>
+      <button onclick="submitAnswer()">Submit</button>
+      <div id="result"></div>
+    </div>
+    <button onclick="showSection('home')">Back to Home</button>
+  </div>
+
+  <!-- JOKE SECTION -->
+  <div id="joke" class="section hidden">
+    <h2>😂 Random Joke Generator</h2>
+    <div id="joke-box">
+      <p id="joke-text">Click the button to get a joke!</p>
+      <button onclick="getJoke()">Get Joke</button>
+    </div>
+    <button onclick="showSection('home')">Back to Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

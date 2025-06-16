@@ -1,0 +1,139 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  background-color: #1e88e5;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.section {
+  padding: 20px;
+  display: none;
+}
+
+.section:not(.hidden) {
+  display: block;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+/* Home Section */
+.home-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.home-card {
+  width: 220px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+}
+
+.home-card.responsive { background-color: #42a5f5; }
+.home-card.quiz       { background-color: #ffca28; color: black; }
+.home-card.joke       { background-color: #66bb6a; }
+
+/* Responsive Boxes */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #26c6da;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background-color: #00acc1;
+}
+
+/* Quiz */
+#quiz-container {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Joke */
+#joke-box {
+  background: #dcedc8;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .home-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-card {
+    width: 80%;
+  }
+
+  .box {
+    width: 80%;
+  }
+}
